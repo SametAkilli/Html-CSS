@@ -1,0 +1,28 @@
+input {
+  height:40px;
+ width:210px;
+  border-color:red;
+  
+}
+
+input:valid {
+  
+  border-color:green;
+}
+
+body {
+  background-color:black;
+}
+
+h3{
+  color:white;
+}
+
+p {
+  color:red;
+}
+
+p:target {
+  
+  background-color:yellow;
+}
