@@ -1,0 +1,33 @@
+p::first-letter {
+    color:red;
+    font-size:57px;
+  }
+  
+  body {
+    background-color:green;
+  }
+  
+  p::selection {
+    color:red;
+    background-color:white;
+  }
+  
+  span::selection {
+    
+    color:white;
+    background-color:red;
+  }
+  
+  ul li:hover {
+    
+    background-color:red;
+  }
+  
+  input[type="radio"] :checked + span {
+    
+    color:red;
+  }
+  
+  button :focus {
+    background-color:red;
+  }
