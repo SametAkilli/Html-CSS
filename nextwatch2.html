@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Video Exapmle</title>
+</head>
+<body>
+  <video id="videoPlayer" controls>
+    <source src="video1.mp4" type="video/mp4">
+    <source src="video1.webm" type="video/webm">
+  </video>
+
+  <script>
+    var videoPlayer = document.getElementById('videoPlayer');
+    var videoList = ['video1.mp4', 'video2.mp4', 'video3.mp4', 'video4.mp4', 'video5.mp4'];
+    var currentVideoIndex = 0;
+
+    videoPlayer.addEventListener('ended', function() {
+      currentVideoIndex++;
+      if (currentVideoIndex >= videoList.length) {
+        currentVideoIndex = 0; // Son video bittiyse, ilk videoya dön
+      }
+
+      videoPlayer.src = videoList[currentVideoIndex];
+      videoPlayer.load();
+      videoPlayer.play();
+    });
+  </script>
+</body>
+</html>
