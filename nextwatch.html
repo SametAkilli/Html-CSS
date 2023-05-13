@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Video Geçiş Örneği</title>
+</head>
+<body>
+  <video id="videoPlayer" controls>
+    <source src="video1.mp4" type="video/mp4">
+    <source src="video1.webm" type="video/webm">
+  </video>
+
+  <script>
+    var videoPlayer = document.getElementById('videoPlayer');
+
+    videoPlayer.addEventListener('ended', function() {
+      // İlk video bittiğinde çalışacak kod
+      // İkinci videoyu oynatmak için gerekli işlemler
+
+      videoPlayer.src = 'video2.mp4'; // İkinci video dosyasının yolunu belirtin
+      videoPlayer.load(); // Yeni videoyu yükleyin
+      videoPlayer.play(); // Yeni videoyu oynatın
+    });
+  </script>
+</body>
+</html>
